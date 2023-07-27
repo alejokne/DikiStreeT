@@ -1,0 +1,463 @@
+/* Estilos generales */
+:root 
+    {
+        --color-dark-bg: #221e0e;
+        --color-light-bg: #090909;
+        --color-primary: #ffffff;
+        --color-secondary: #ff8f2e;
+        --color-accent: #3e0e0e;
+        --color-wine: #000000;
+    
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-dark-bg);
+    color: var(--color-secondary);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el header y footer */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #380000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header img {
+    width: 150px; /* Ajustado a 40px */
+    height: 150px; /* Ajustado a 40px */
+    margin-right: 10px;
+    border-radius: 2%;
+    
+  }
+  
+  footer {
+    padding: 40px 0;
+    background-color: var(--color-wine); /* Rojo */
+    color: var(--color-secondary);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para el logo y carrito */
+  .logo img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: none
+    
+  }
+  
+  .cart img {
+    width: 100px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .cart img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para el main */
+  main {
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #090909;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilos para el carrito de compras */
+  .product {
+    position: relative;
+    background-color: var(--color-light-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Añadido para flexibilidad */
+    align-items: center; /* Añadido para centrar verticalmente */
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product img {
+    flex: 1; /* Añadido para que la imagen ocupe el espacio restante */
+    height: 200px; /* Ajustar la altura de la imagen */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px; /* Agregado margen para separar la imagen del contenido */
+  }
+  
+  .product-details {
+    flex: 1; /* Añadido para que el contenido ocupe más espacio */
+  }
+  
+  .product-info {
+    text-align: center; /* Añadido para alinear el contenido hacia el centro */
+    margin-bottom: 20px; /* Añadido margen inferior */
+  }
+  
+  .product-info h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: var(--color-secondary);
+  }
+  
+  .product-info p {
+    font-size: 18px;
+    margin: 0;
+    color: #ccc;
+  }
+  
+  .quantity {
+    display: flex;
+    justify-content: center; /* Añadido para centrar horizontalmente */
+    align-items: center; /* Añadido para centrar verticalmente */
+    margin-bottom: 10px;
+  }
+  
+  .quantity label {
+    margin-right: 10px;
+    color: #ccc;
+  }
+  
+  .quantity input {
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ff9100;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--color-dark-bg);
+    color: var(--color-secondary);
+  }
+  
+  .subtotal {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+  }
+  
+  .remove-product {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-primary);
+    color: var();
+    border: none;
+    border-radius: 8%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1;
+  }
+  
+  .remove-product:hover {
+    background-color: #9c0000;
+    transform: scale(1.1);
+    color: #ccc;
+  }
+  
+  /* Estilos para los productos en descuento */
+  .discount-product {
+    position: relative;
+    background-color: var(--color-light-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Añadido para flexibilidad */
+    align-items: center; /* Añadido para centrar verticalmente */
+  }
+  
+  .discount-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .discount-product img {
+    flex: 1; /* Añadido para que la imagen ocupe el espacio restante */
+    height: 200px; /* Ajustar la altura de la imagen */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px; /* Agregado margen para separar la imagen del contenido */
+  }
+  
+  .discount-product-details {
+    flex: 1; /* Añadido para que el contenido ocupe más espacio */
+  }
+  
+  .discount-product-info {
+    text-align: center; /* Añadido para alinear el contenido hacia el centro */
+    margin-bottom: 20px; /* Añadido margen inferior */
+  }
+  
+  .discount-product-info h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: var(--color-secondary);
+  }
+  
+  .discount-product-info p {
+    font-size: 18px;
+    margin: 0;
+    color: #ccc;
+  }
+  
+  .discount-product-info .discounted-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+  .add-to-cart {
+    background-color: var(--color-secondary);
+    color: var(--color-light-bg);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #9c0000;
+    transform: scale(1.1);
+    color: #ccc;
+  }
+  
+  /* Estilos para el total y envío */
+  .total {
+    background-color: var(--color-light-bg);
+    color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .total h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+  }
+  
+  .shipping-info {
+    margin: 10px 0;
+  }
+  
+  .shipping-info label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+  
+  .shipping-info input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--color-dark-bg);
+    color: var(--color-secondary);
+  }
+  
+  .calculate-shipping,
+  .checkout {
+    background-color: var(--color-secondary);
+    color: var(--color-light-bg);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .calculate-shipping:hover,
+  .checkout:hover {
+    background-color: #9c0000;
+    transform: scale(1.1);
+    color: #ffffff;
+  }
+  
+  .continue-shopping a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .continue-shopping a:hover {
+    color: #9c0000;
+  }
+  
+  /* Animaciones y efectos */
+  .notification {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    animation: fadeInOut 3s ease-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    padding: 40px 0;
+    background-color: var(--color-wine); /* Rojo */
+    color: var(--color-secondary);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .support {
+    margin-bottom: 20px;
+  }
+  
+  .support h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+  }
+  
+  .support ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .support li {
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+  
+  .useful-links h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+  }
+  
+  .useful-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .useful-links li {
+    margin-bottom: 5px;
+  }
+  
+  .useful-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .useful-links a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Estilos para el formulario de envío */
+  .shipping-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shipping-form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--color-secondary);
+  }
+  
+  .shipping-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--color-accent); /* Borde amarillo claro */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--color-light-bg);
+    color: var(--color-secondary);
+  }
+  
+  /* Estilos para los botones */
+  .action-button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #d35b00;
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para el carrito vacío */
+  .empty-cart {
+    text-align: center;
+    font-size: 24px;
+    color: var(--color-secondary);
+    margin: 50px 0;
+  }
+  
+  /* Media query para ajustar el layout en pantallas pequeñas */
+  @media (max-width: 768px) {
+    main {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    /* ... (códigos anteriores) */
+  }
+  
+  /* Media query para ajustar el layout en pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    /* ... (códigos anteriores) */
+  }
+  

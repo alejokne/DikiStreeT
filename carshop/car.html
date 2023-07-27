@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Carrito - DikiStreet</title>
+  <link rel="stylesheet" href="car.css"> <!-- Agrega aquí tus estilos personalizados -->
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Coloca aquí el logo de la tienda y su enlace al inicio -->
+      <a href="file:///Users/alejolg/Desktop/PROGAMACION%20WEB/prwv/kilku/index.html">
+        <img src="file:///Users/alejolg/Desktop/PROGAMACION%20WEB/prwv/kilku/images/logoimg.png" alt="Logo de la Tienda">
+      </a>
+    </div>
+    <div class="cart">
+      <!-- Icono de carrito con contador de elementos y enlace al carrito -->
+      <a>
+        <img src="file:///Users/alejolg/Desktop/PROGAMACION%20WEB/prwv/kilku/images/carshop.png" alt="Carrito de Compras">
+        <span class="cart-counter">(productos)</span>
+      </a>
+    </div>
+  </header>
+  <main class="cart-page">
+    <h1>Carrito de Compras</h1>
+    <p class="continue-shopping">
+        <a href="index.html">Continuar comprando</a>
+      </p>
+    <div class="cart-products">
+      <!-- Lista de productos agregados al carrito -->
+      <div class="product">
+        <img src="producto1.jpg" alt="Producto 1">
+        <div class="product-info">
+          <h2>Nombre del Producto 1</h2>
+          <p>Precio: $50.00</p>
+          <div class="quantity">
+            <!-- Selección de cantidad -->
+            <label for="quantity-product1">Cantidad:</label>
+            <input type="number" id="quantity-product1" name="quantity-product1" value="1" min="1">
+          </div>
+          <p class="subtotal">Subtotal: $50.00</p> <!-- Mostrar el subtotal -->
+          <button class="remove-product">Eliminar</button>
+        </div>
+      </div>
+      <!-- Agrega aquí más productos en el carrito si es necesario -->
+    </div>
+
+    <div class="discounts-container">
+      <h2>¡Descuentos para ti!</h2>
+      <!-- Muestra aquí los productos con descuento para el usuario -->
+      <div class="discount-product">
+        <img src="descuento-producto1.jpg" alt="Descuento Producto 1">
+        <div class="discount-product-info">
+          <h3>Nombre del Producto en Descuento</h3>
+          <p>Precio: $40.00 <span class="discounted-price">(Antes: $60.00)</span></p>
+          <button class="add-to-cart" data-discount="20">Agregar al Carrito</button>
+        </div>
+      </div>
+      <!-- Agrega más productos en descuento si es necesario -->
+    </div>
+
+    <div class="total">
+      <!-- Muestra el total de la compra -->
+      <h2>Total: $150.00</h2>
+      <div class="shipping-info">
+        <label for="shipping-address">Dirección de Envío:</label>
+        <input type="text" id="shipping-address" name="shipping-address" placeholder="Ingresa tu dirección">
+      </div>
+      <button class="calculate-shipping">Calcular Envío</button>
+      <button class="checkout">Finalizar Compra</button>
+      
+    </div>
+  </main>
+  <footer>
+    <div class="support">
+      <h3>¿Necesitas ayuda?</h3>
+      <p>Contáctanos a través de:</p>
+      <ul>
+        <li>Email: soporte@tiendaropa.com</li>
+        <li>Teléfono: 555-123-4567</li>
+      </ul>
+    </div>
+    <div class="useful-links">
+      <h3>Enlaces útiles</h3>
+      <ul>
+        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+        <li><a href="politicas.html">Política de Devoluciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+ 
+  <link src="/carshop/script.js">
+   
+
+</body>
+</html>

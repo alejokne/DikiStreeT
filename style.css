@@ -1,0 +1,308 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181414;
+}
+
+/* Estilos del header */
+header {
+    background-color: #380000;
+    color: #f7b500;
+    display: flex;
+    box-shadow: #000000 60px;
+    justify-content: space-between;
+    padding: 3.75vw 1vw; /* Ajuste del padding a unidades relativas */
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 2.5vw; /* Ajuste del tamaño a unidades relativas */
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon .bar {
+    width: 1.875vw; /* Ajuste del tamaño a unidades relativas */
+    background-color: #ff7700;
+    margin: 0.625vw 0; /* Ajuste del margen a unidades relativas */
+    transition: 0.3s;
+}
+
+.logo img{
+    
+        width: 20vw;
+        cursor: pointer;
+        right: 39vw;
+        position: absolute;
+       height: 18vw;
+    
+}
+
+.logotxt img {
+    width: 26.38vw;
+    position: relative;
+    left: -24.25vw;
+    top: -0.94vw;
+    cursor: pointer;
+}
+
+.logotxt:hover {
+    filter: brightness(90%);
+}
+
+.cart-icon img {
+    width: 6.5vw; /* Ajuste del tamaño a unidades relativas */
+    cursor: pointer;
+    
+    padding: 2vw;
+}
+
+.cart-icon:hover {
+    filter: brightness(9);
+}
+
+/* Estilos del banner */
+.banner {
+    width: 100%;
+    height: 18.75vw; /* Ajuste de la altura a unidades relativas */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                      url("banners/bannersdikis2.jpg");
+    background-position: center;
+    animation: slideBanner 5s infinite;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajuste del objeto a unidades relativas */
+
+}
+
+@keyframes slideBanner {
+    0% {
+        left: 0.7vw;
+    }
+    100% {
+        left: 1vw;
+    }
+}
+.main-content{
+    display: block;
+}
+/* Estilos del contenido */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3.75vw; /* Ajuste del padding a unidades relativas */
+}
+
+.product-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0vw; /* Ajuste del margen a unidades relativas */
+    background-color: #101010;
+    padding: 2vw;
+    box-shadow: #000000;
+}
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination button {
+    background-color: rgb(14, 14, 14);
+    color: rgb(188, 188, 188);
+    padding: 0.625vw 1.25vw; /* Ajuste del padding a unidades relativas */
+    border: none;
+    border-radius: 0.3125vw; /* Ajuste del radio del borde a unidades relativas */
+    cursor: pointer;
+    margin-top: 0.625vw; /* Ajuste del margen a unidades relativas */
+    transition: background-color 0.3s ease-in-out;
+}
+.filtro{
+background-color: #000000;
+border: solid #ffb700;
+text-align: center;
+padding: 2vw;
+box-shadow: #000000 20%;
+color: #f0f0f0;
+}
+.page-link {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.page-link:hover {
+    background-color: #060606;
+}
+
+.page-link.active {
+    background-color: #ff4a0e;
+}
+.product-item {
+    margin: -0.9vw; 
+    width: 91%;
+    text-align: center;
+    color: #f0f0f0;
+    cursor: pointer;
+    border: 0.39vw solid #363636;
+    transition: transform 0.3s cubic-bezier(0.14, -0.55, 0.16, 2.2);
+    height: 92%;
+    padding: 3pw;
+    background-color: #000000;
+   display: grid;
+}
+
+
+.product-item:hover {
+    transform: scale(1.1);
+    border-color: #ff8400;
+}
+
+.product-item img {
+    
+        width: 17.25vw;
+        height: 18.25vw;
+        border-radius: 3%;
+        margin-bottom: 1.63vw;
+        padding: 10%;
+    
+}
+
+/* Estilos de la descripción del producto */
+.product-description {
+    flex-basis: 18.75vw; /* Ajuste del tamaño a unidades relativas */
+    padding: 1.25vw; /* Ajuste del padding a unidades relativas */
+    background-color: #000000;
+    border: 0.125vw solid #ea8900; /* Ajuste del borde a unidades relativas */
+    border-radius: 0.625vw; /* Ajuste del radio del borde a unidades relativas */
+    box-shadow: 0 0.3125vw 0.625vw rgba(0, 0, 0, 0.2); /* Ajuste del sombreado a unidades relativas */
+    transition: 0.3s;
+}
+
+.product-description h2 {
+    color: #ffb700;
+}
+
+.product-description p {
+    color: #c96400;
+}
+
+.product-description button {
+    background-color: rgb(14, 14, 14);
+    color: rgb(188, 188, 188);
+    padding: 0.625vw 1.25vw; /* Ajuste del padding a unidades relativas */
+    border: none;
+    border-radius: 0.3125vw; /* Ajuste del radio del borde a unidades relativas */
+    cursor: pointer;
+    margin-top: 0.625vw; /* Ajuste del margen a unidades relativas */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product-description button:hover {
+    background-color:#b13232;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #000000;
+    padding: 3.75vw; /* Ajuste del padding a unidades relativas */
+    text-align: center;
+    position: relative;
+
+}
+.support {
+    margin-bottom: 20px;
+  }
+  
+  .support h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+  }
+  
+  .support ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .support li {
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+  
+  .useful-links h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+  }
+  
+  .useful-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .useful-links li {
+    margin-bottom: 5px;
+  }
+  
+  .useful-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .useful-links a:hover {
+    color: var(--color-primary);
+  }
+.footer-links a {
+    color: #1e1e1e;
+    font-size: 1.875vw; /* Ajuste del tamaño a unidades relativas */
+    margin: 1.25vw; /* Ajuste del margen a unidades relativas */
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffa200;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .product-table {
+        justify-content: center;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: 22vw; /* Ajuste del ancho máximo a unidades relativas */
+    }
+}
+:root {
+    --color-primary: #1c1c1c;
+    --color-secondary: #ffffff;
+    --color-accent: #ff7700;
+    --color-button: #ff5252;
+    --color-button-hover: #ff3a3a;
+    --color-footer: #b13232;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary);
+}
